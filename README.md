@@ -170,8 +170,8 @@ Object State Affordance Reasoning (OSAR) is our proposed benchmark for referring
 | MiniCPM-V 2.6|Baseline|--| 17 GB  | --   |  [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
 | statevlm_seq_5000 | Full Fine-Tuning|$StateVLM _{CLM}$ | 17 GB  | RefCOCO3 | [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
 | statevlm_emb_20000 |Full Fine-Tuning| $StateVLM _{CLM+ARL}$ | 17 GB  |  RefCOCO3| [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
-| statevlm_seq_5000_lora_adapter | LoRA Fine-Tuning |$StateVLM _{CLM}$ | 17 GB  | OSAR | [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
-| statevlm_emb_20000_lora_adapter |LoRA Fine-Tuning | $StateVLM _{CLM+ARL}$  | 17 GB  | OSAR | [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
+| statevlm_seq_5000_lora_adapter | LoRA Fine-Tuning |$StateVLM _{CLM, lora}$ | 17 GB  | OSAR | [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
+| statevlm_emb_20000_lora_adapter |LoRA Fine-Tuning | $StateVLM _{CLM+ARL, lora}$  | 17 GB  | OSAR | [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
 
 
 
@@ -200,13 +200,13 @@ Performance Evaluation of the $StateVLM _{CLM}$ on Adapted RefCOCO3
 Performance Evaluation of the $StateVLM _{CLM+ARL}$ on Adapted RefCOCO3
 (Folder script_REC/seq)
 
-Performance Evaluation of the $StateVLM _{CLM}$ and $StateVLM _{CLM+ARL}$ on OSAR
+Performance Evaluation of the $StateVLM _{CLM, lora}$ and $StateVLM _{CLM+ARL, lora}$ on OSAR
 (Folder script_OSAR/baseline)
 
-Performance Evaluation of the $StateVLM _{CLM+ARL}$ on OSAR
+Performance Evaluation of the $StateVLM _{CLM+ARL, lora}$ on OSAR
 (Folder script_OSAR/emb)
 
-Performance Evaluation of the $StateVLM _{CLM}$ on OSAR
+Performance Evaluation of the $StateVLM _{CLM, lora}$ on OSAR
 (Folder script_OSAR/seq)
 
 
