@@ -15,7 +15,7 @@ DISTRIBUTED_ARGS="
 "
 
 MODEL="../../model_zoo/statevlm_emb_20000"
-TEST_DATA="../../datasets/REC/evaluations/REC_refcocog_umd_val_dia_eva.json"
+TEST_DATA="../../datasets/REC/refcoco3_dia_annotations/REC_refcocog_umd_val_dia_eva.json"
 IMAGE_PATH="../../datasets/REC/"
 LLM_TYPE="qwen2" 
 MODEL_MAX_Length=2048 

@@ -14,7 +14,7 @@ The joint training objective in StateVLM demonstrates that integrating an auxili
 
 - [1. Installation](#Installation)
 - [2. Dataset Preparation](#Dataset-Preparation)
-- [3. Training](#Training)
+- [3. Comparative Training Methods](#Comparative Training Methods)
 - [4. Model Zoo](#Model-Zoo)
 - [5. Evaluation](#Evaluation)
 
@@ -61,13 +61,12 @@ http://images.cocodataset.org/zips/train2014.zip
 
 #### 1.2 Annotations
     
-##### 1.2.1 Download adapted refcoco3_dialog annotations directly
+##### 1.2.1 Download adapted refcoco3_dialog annotations directly (recommended)
 
 
-Download [Adapted annotations](
-xx)
+Download [Adapted annotations](https://drive.google.com/file/d/10DBwdFa8cuM1qn1FlwxvpT8ckIU3wJrj/view?usp=sharing)
 
-xx
+https://drive.google.com/file/d/10DBwdFa8cuM1qn1FlwxvpT8ckIU3wJrj/view?usp=sharing
 
 ##### 1.2.2 Convert refcoco3 to refcoco3_dialog for training
 
@@ -105,10 +104,9 @@ StateVLM/
     │   ├── refcoco3_annotations/ (Optional)
     │   │   ├── REC_ref3_train.jsonl
     │   │   └── ...
-    │   ├── training/
-    │   │   ├── REC_ref3_train_dia.json
-    │   │   └── ...
-    │   └── test/
+    │   ├── refcoco3_dia_annotations/
+    │       ├── REC_ref3_train_dia.json
+    │       │   ...
     │       ├── REC_refcoco_unc_testA_dia_eva.json
     │       └── ...
     └── OSAR_Benchmark/
@@ -169,11 +167,11 @@ Object State Affordance Reasoning (OSAR) is our proposed benchmark for referring
 
 | Model | Fine-Tuning Method | Training objective | Memory |  Datesets | Download |
 |:-----------|:--:|:-----------:|:-----------:|:-------------------|:---------------:|
-| MiniCPM-V 2.6|Baseline|CLM | 17 GB  | --   |  [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-2_6) |
-| statevlm_seq_5000 | Full Fine-Tuning|CLM | 17 GB  | RefCOCO3 | [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-2_6-gguf) |
-| statevlm_emb_20000 |Full Fine-Tuning| CLM + ARL | 17 GB  |  RefCOCO3| [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-2_6-gguf) |
-| statevlm_seq_5000_lora_adapter | LoRA Fine-Tuning |CLM | 17 GB  | OSAR | [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-2_6-gguf) |
-| statevlm_emb_20000_lora_adapter |LoRA Fine-Tuning | CLM + ARL  | 17 GB  | OSAR | [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-2_6-gguf) |
+| MiniCPM-V 2.6|Baseline|--| 17 GB  | --   |  [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
+| statevlm_seq_5000 | Full Fine-Tuning|$StateVLM _{CLM}$ | 17 GB  | RefCOCO3 | [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
+| statevlm_emb_20000 |Full Fine-Tuning| $StateVLM _{CLM+ARL}$ | 17 GB  |  RefCOCO3| [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
+| statevlm_seq_5000_lora_adapter | LoRA Fine-Tuning |$StateVLM _{CLM}$ | 17 GB  | OSAR | [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
+| statevlm_emb_20000_lora_adapter |LoRA Fine-Tuning | $StateVLM _{CLM+ARL}$  | 17 GB  | OSAR | [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
 
 
 

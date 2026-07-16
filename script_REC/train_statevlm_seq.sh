@@ -6,8 +6,8 @@ MASTER_ADDR=localhost
 MASTER_PORT=6001
 
 MODEL="../model_zoo/MiniCPM-V-2_6"
-DATA="../datasets/REC/training/REC_ref3_train_dia.json"
-EVAL_DATA="../datasets/REC/training/REC_ref3_val_dia.json"
+DATA="../datasets/REC/refcoco3_dia_annotations/REC_ref3_train_dia.json"
+EVAL_DATA="../datasets/REC/refcoco3_dia_annotations/REC_ref3_val_dia.json"
 IMAGE_PATH="../datasets/REC/"
 LLM_TYPE="qwen2"
 MODEL_MAX_Length=2048 

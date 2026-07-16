@@ -14,7 +14,7 @@ DISTRIBUTED_ARGS="
     --master_port $MASTER_PORT
 "
 MODEL="../model_zoo/MiniCPM-V-2_6"
-TEST_DATA="../datasets/REC/evaluations/REC_refcoco_unc_testB_dia_eva.json"
+TEST_DATA="../datasets/REC/refcoco3_dia_annotations/REC_refcoco_unc_testB_dia_eva.json"
 IMAGE_PATH="../datasets/REC/"
 LLM_TYPE="qwen2" 
 MODEL_MAX_Length=2048 
