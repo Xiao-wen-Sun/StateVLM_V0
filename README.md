@@ -14,7 +14,7 @@ The joint training objective in StateVLM demonstrates that integrating an auxili
 
 - [1. Installation](#Installation)
 - [2. Dataset Preparation](#Dataset-Preparation)
-- [3. Comparative Training Methods](#Comparative Training Methods)
+- [3. Comparative Training Methods](#Comparative-Training-Methods)
 - [4. Model Zoo](#Model-Zoo)
 - [5. Evaluation](#Evaluation)
 

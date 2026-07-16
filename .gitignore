@@ -7,7 +7,7 @@ __pycache__/
 /model_zoo
 *outputs
 .vscode
-
+/runs
 
 # C extensions
 *.so
