@@ -1,12 +1,8 @@
 # StateVLM
 ## StateVLM: A State-Aware Vision-Language Model for Robotic Affordance Reasoning
 
-Vision-language models (VLMs) have demonstrated strong performance across robotic perception and instruction-following tasks. However, they still struggle with precise spatial reasoning, particularly in predicting object locations and fine-grained object states.
-We propose StateVLM, a vision-language model designed to learn fine-grained object representations, including object localization and grasp-relevant region prediction. 
-We introduce a joint training objective that integrates an auxiliary regression loss (ARL) with the standard causal language modeling (CLM) objective to improve numerical reasoning and spatial understanding. 
-To evaluate whether models can move beyond category-level grounding toward state-aware spatial understanding, we introduce an open-source benchmark, Object State Affordance Reasoning (OSAR), comprising 1,172 scenes with 7,746 individual objects and their corresponding bounding boxes.
-Empirical experiments on RefCOCO, RefCOCO+, and RefCOCOg demonstrate that integrating ARL improves model performance compared with CLM only. Experiments on the OSAR benchmark further demonstrate that StateVLM with ARL achieves an average improvement of 5.2\% over models trained with CLM only. These results show that ARL is particularly beneficial for the complex affordance reasoning tasks that require object state understanding.
-The joint training objective in StateVLM demonstrates that integrating an auxiliary regression objective into VLM training improves numerical reasoning, and the OSAR benchmark provides a new testbed for understanding object-state affordances in robotics.
+Vision-language models (VLMs) have demonstrated strong performance across robotic perception and instruction-following tasks. However, they still struggle with precise spatial reasoning, particularly in predicting object locations and fine-grained object states. We propose StateVLM, a vision-language model designed to learn fine-grained object representations, including object localization and grasp-relevant region prediction. 
+We introduce a joint training objective that integrates an auxiliary regression loss (ARL) with the standard causal language modeling (CLM) objective to improve numerical reasoning and spatial understanding. To evaluate whether models can move beyond category-level grounding toward state-aware spatial understanding, we introduce an open-source benchmark, Object State Affordance Reasoning (OSAR), comprising 1,172 scenes with 7,746 individual objects and their corresponding bounding boxes. Empirical experiments on RefCOCO, RefCOCO+, and RefCOCOg demonstrate that integrating ARL improves model performance compared with CLM only. Experiments on the OSAR benchmark further demonstrate that StateVLM with ARL achieves an average improvement of 5.2\% over models trained with CLM only. These results show that ARL is particularly beneficial for the complex affordance reasoning tasks that require object state understanding. The joint training objective in StateVLM demonstrates that integrating an auxiliary regression objective into VLM training improves numerical reasoning, and the OSAR benchmark provides a new testbed for understanding object-state affordances in robotics.
 
 
 
@@ -93,6 +89,10 @@ https://www2.informatik.uni-hamburg.de/wtm/OSAR/OSAR_Benchmark.zip)
 
 https://www2.informatik.uni-hamburg.de/wtm/OSAR/OSAR_Benchmark.zip
 
+Or
+
+[🤗](https://huggingface.co/datasets/Xiaowen/OSAR)
+
 
 ```text
 StateVLM/
@@ -120,7 +120,7 @@ StateVLM/
 
 ## Comparative Training Methods
 
-https://huggingface.co/openbmb/MiniCPM-V-2_6/tree/main
+
 
 
 ## Train the model with joint training objective: Causal Language Modeling (CLM) + Auxiliary Regression Loss (ARL)
@@ -167,11 +167,11 @@ Object State Affordance Reasoning (OSAR) is our proposed benchmark for referring
 
 | Model | Fine-Tuning Method | Training objective | Memory |  Datesets | Download |
 |:-----------|:--:|:-----------:|:-----------:|:-------------------|:---------------:|
-| MiniCPM-V 2.6|Baseline|--| 17 GB  | --   |  [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
-| statevlm_seq_5000 | Full Fine-Tuning|$StateVLM _{CLM}$ | 17 GB  | RefCOCO3 | [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
-| statevlm_emb_20000 |Full Fine-Tuning| $StateVLM _{CLM+ARL}$ | 17 GB  |  RefCOCO3| [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
-| statevlm_seq_5000_lora_adapter | LoRA Fine-Tuning |$StateVLM _{CLM, lora}$ | 17 GB  | OSAR | [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
-| statevlm_emb_20000_lora_adapter |LoRA Fine-Tuning | $StateVLM _{CLM+ARL, lora}$  | 17 GB  | OSAR | [<img src="./assets/modelscope_logo.png" width="20px"></img>]() |
+| MiniCPM-V 2.6|Baseline|--| 17 GB  | --   |  [🤗](https://huggingface.co/openbmb/MiniCPM-V-2_6) |
+| statevlm_seq_5000 | Full Fine-Tuning|$StateVLM _{CLM}$ | 17 GB  | RefCOCO3 | [🤗](https://huggingface.co/Xiaowen/StateVLM_seq_5000) |
+| statevlm_emb_20000 |Full Fine-Tuning| $StateVLM _{CLM+ARL}$ | 17 GB  |  RefCOCO3| [🤗](https://huggingface.co/Xiaowen/StateVLM_emb_20000)|
+| statevlm_seq_5000_lora_adapter | LoRA Fine-Tuning |$StateVLM _{CLM, lora}$ | 17 GB  | OSAR | [🤗](https://huggingface.co/Xiaowen/StateVLM_seq_5000_lora_adapter) |
+| statevlm_emb_20000_lora_adapter |LoRA Fine-Tuning | $StateVLM _{CLM+ARL, lora}$  | 17 GB  | OSAR | [🤗](https://huggingface.co/Xiaowen/StateVLM_emb_20000_lora_adapter) |
 
 
 
